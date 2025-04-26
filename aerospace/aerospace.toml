@@ -1,0 +1,166 @@
+# Запускать AeroSpace при старте системы
+start-at-login = true
+
+# Нормализации. Источник: https://nikitabobko.github.io/AeroSpace/guide#normalization
+enable-normalization-flatten-containers = true
+enable-normalization-opposite-orientation-for-nested-containers = true
+
+# Тип компоновки окон по умолчанию
+# Возможные значения: tiles|accordion
+default-root-container-layout = 'tiles'
+
+# Ориентация окон по умолчанию
+# Возможные значения: horizontal|vertical|auto
+# 'auto' означает: - Широкий монитор (ширина больше высоты) получит горизонтальную ориентацию;
+#                  - Высокий монитор (высота больше ширины) получит вертикальную ориентацию
+default-root-container-orientation = 'auto'
+
+# Определение используемой раскладки клавиатуры
+# Возможные значения: (qwerty|dvorak)
+# Источник: https://nikitabobko.github.io/AeroSpace/guide#key-mapping
+key-mapping.preset = 'qwerty'
+
+# Перемещение курсора мыши между мониторами при изменении фокуса
+# Источники: https://nikitabobko.github.io/AeroSpace/guide#on-focus-changed-callbacks
+# 	     https://nikitabobko.github.io/AeroSpace/commands#move-mouse
+on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
+on-focus-changed = "move-mouse window-lazy-center"
+
+# Внешние отступы окон
+# Возможные значения:
+# - Статически заданное:     	gaps.outer.top = 8
+# - В зависимости от монитора:  gaps.outer.top = [{ monitor.main = 16 }, { monitor."some-pattern" = 32 }, 24]
+#                 		В этом примере, 24 - значение по умолчанию, если мониторы с указанными названиями не были найдены
+#                 		Подробнее: https://nikitabobko.github.io/AeroSpace/guide#assign-workspaces-to-monitors
+[gaps]
+inner.horizontal = 18
+inner.vertical =   18
+outer.left =       18
+outer.bottom =     18
+outer.top =        18
+outer.right =      18
+
+# Сочетания клавиш основного режима
+# Источник: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
+[mode.main.binding]
+
+# Перемещение фокуса между окнами
+# Источник: https://nikitabobko.github.io/AeroSpace/commands#focus
+alt-h = 'focus left'
+alt-j = 'focus down'
+alt-k = 'focus up'
+alt-l = 'focus right'
+
+# Перемещение окна по экрану
+# Источник: https://nikitabobko.github.io/AeroSpace/commands#move
+alt-shift-h = 'move left'
+alt-shift-j = 'move down'
+alt-shift-k = 'move up'
+alt-shift-l = 'move right'
+
+# Перемещение фокуса между рабочими пространствами
+# Источник: https://nikitabobko.github.io/AeroSpace/commands#workspace
+alt-1 = 'workspace 1'
+alt-2 = 'workspace 2'
+alt-3 = 'workspace 3'
+alt-4 = 'workspace 4'
+alt-5 = 'workspace 5'
+alt-6 = 'workspace 6'
+alt-7 = 'workspace 7'
+alt-8 = 'workspace 8'
+alt-9 = 'workspace 9'
+alt-b = 'workspace B' # Браузер
+alt-e = 'workspace E' # Finder
+alt-m = 'workspace M' # Мессенджеры
+alt-t = 'workspace T' # Терминал
+alt-v = 'workspace V' # VPN
+
+# Перемещение окна между рабочими пространствами
+# Источник: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
+alt-shift-1 = 'move-node-to-workspace 1'
+alt-shift-2 = 'move-node-to-workspace 2'
+alt-shift-3 = 'move-node-to-workspace 3'
+alt-shift-4 = 'move-node-to-workspace 4'
+alt-shift-5 = 'move-node-to-workspace 5'
+alt-shift-6 = 'move-node-to-workspace 6'
+alt-shift-7 = 'move-node-to-workspace 7'
+alt-shift-8 = 'move-node-to-workspace 8'
+alt-shift-9 = 'move-node-to-workspace 9'
+alt-shift-b = 'move-node-to-workspace B'
+alt-shift-e = 'move-node-to-workspace E'
+alt-shift-m = 'move-node-to-workspace M'
+alt-shift-n = 'move-node-to-workspace N'
+alt-shift-p = 'move-node-to-workspace P'
+alt-shift-t = 'move-node-to-workspace T'
+alt-shift-v = 'move-node-to-workspace V'
+
+# Растянуть окно по всему размеру окна
+alt-shift-f = 'fullscreen'
+
+# Перейти в сервисный режим
+# Источник: https://nikitabobko.github.io/AeroSpace/commands#mode
+alt-shift-semicolon = 'mode service'
+
+# Перейти в режим изменения размера
+# Источник: https://nikitabobko.github.io/AeroSpace/commands#mode
+alt-shift-r = 'mode resize'
+
+# Сочетания клавиш режима изменения размера
+[mode.resize.binding]
+
+# Растянуть окно вправо, вниз, вверх и влево
+h = 'resize width -50'
+j = 'resize height +50'
+k = 'resize height -50'
+l = 'resize width +50'
+
+# Сбалансировать размеры окон на экране
+b = 'balance-sizes'
+
+# "Умное" изменение размера окна 
+# В какую сторону растягивать окно решается под капотом
+# Источник: https://nikitabobko.github.io/AeroSpace/commands#resize
+minus = 'resize smart -50'
+equal = 'resize smart +50'
+
+# Кнопки выхода в основной режим
+enter = 'mode main'
+esc = 'mode main'
+
+# Сочетания клавиш для "Сервисного режима"
+# Источник: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
+[mode.service.binding]
+
+# Применить конфигурацию AeroSpace и выйти в основной режим
+esc = ['reload-config', 'mode main']
+
+# Сбросить компоновку и выйти в основной режим
+r = ['flatten-workspace-tree', 'mode main']
+
+# Переключиться между плиточным и плавающим режимом расположения окон
+# И выйти в основной режим
+f = ['layout floating tiling', 'mode main']
+
+# Закрыть все окна кроме текущего и выйти в основной режим
+backspace = ['close-all-windows-but-current', 'mode main']
+
+# Присоединить окна слева, снизу, сверху и справа к текущему, образуя новый контейнер
+alt-shift-h = ['join-with left', 'mode main']
+alt-shift-j = ['join-with down', 'mode main']
+alt-shift-k = ['join-with up', 'mode main']
+alt-shift-l = ['join-with right', 'mode main']
+
+# Переместить браузер в рабочее пространство "B" при открытии
+[[on-window-detected]]
+if.app-id = 'com.apple.Safari'
+run = "move-node-to-workspace B"
+
+# Переместить VPN-клиент в рабочее пространство "V" при открытии
+[[on-window-detected]]
+if.app-id = 'app.hiddify.com'
+run = "move-node-to-workspace V"
+
+# Переместить Telegram в рабочее пространство "M" при открытии
+[[on-window-detected]]
+if.app-id = 'com.tdesktop.Telegram'
+run = 'move-node-to-workspace M'
