@@ -1,6 +1,6 @@
 [general]
 import = [
-    "C:\\Users\\sterx\\AppData\\Roaming\\alacritty\\themes\\themes\\gruvbox_dark.toml"
+    "/Users/wariazait/.config/alacritty/themes/themes/gruvbox_dark.toml"
 
 # THEMES:
 
