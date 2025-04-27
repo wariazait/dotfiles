@@ -1,41 +1,5 @@
 [general]
-import = [
-    "./themes/themes/gruvbox_dark.toml"
-
-# THEMES:
-
-# SOFT COLORS:
-#
-# - autumn
-# - citylights
-# - wombat
-# - tomorrow_night
-# - taerminal
-# - remedy_dark
-# - monokai_pro
-# - kanagawa_dragon
-# - kanagawa_wave
-# - everforest_dark
-# - gruvbox_dark
-# - gruvbox_material_hard_dark
-
-# CONTRAST COLORS:
-#
-# - ayu_dark
-
-# VIVID:
-#
-# - catppuccin_mocha
-# - enfocado_dark
-# - rose_pine
-# - palenight
-# - night_owl
-
-# GREY:
-#
-# - doom_one 
-# - nordic
-]
+import = ["./themes/themes/gruvbox_dark.toml"]
 
 [env]
 TERM = "xterm-256color"
