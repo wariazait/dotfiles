@@ -15,6 +15,10 @@ default-root-container-layout = 'tiles'
 #                  - Высокий монитор (высота больше ширины) получит вертикальную ориентацию
 default-root-container-orientation = 'auto'
 
+# Отключение скрытия окна macOS.
+# Источник: https://nikitabobko.github.io/AeroSpace/goodies#disable-hide-app
+automatically-unhide-macos-hidden-apps = true
+
 # Определение используемой раскладки клавиатуры
 # Возможные значения: (qwerty|dvorak)
 # Источник: https://nikitabobko.github.io/AeroSpace/guide#key-mapping
@@ -43,6 +47,9 @@ outer.right =      18
 # Сочетания клавиш основного режима
 # Источник: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
 [mode.main.binding]
+
+alt-slash = 'layout tiles horizontal vertical'
+alt-comma = 'layout accordion horizontal vertical'
 
 # Перемещение фокуса между окнами
 # Источник: https://nikitabobko.github.io/AeroSpace/commands#focus
@@ -74,6 +81,7 @@ alt-e = 'workspace E' # Finder
 alt-m = 'workspace M' # Мессенджеры
 alt-t = 'workspace T' # Терминал
 alt-v = 'workspace V' # VPN
+alt-c = 'workspace C' # IDE
 
 # Перемещение окна между рабочими пространствами
 # Источник: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
@@ -93,6 +101,15 @@ alt-shift-n = 'move-node-to-workspace N'
 alt-shift-p = 'move-node-to-workspace P'
 alt-shift-t = 'move-node-to-workspace T'
 alt-shift-v = 'move-node-to-workspace V'
+alt-shift-c = 'move-node-to-workspace C'
+
+# Перемещение между предыдущим рабочим пространством и обратно
+# Источник: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
+alt-tab = 'workspace-back-and-forth'
+
+# Перемещение рабочего пространства на другой монитор
+# Источник: https://nikitabobko.github.io/AeroSpace/commands#move-workspace-to-monitor
+alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
 
 # Растянуть окно по всему размеру окна
 alt-shift-f = 'fullscreen'
@@ -150,6 +167,23 @@ alt-shift-j = ['join-with down', 'mode main']
 alt-shift-k = ['join-with up', 'mode main']
 alt-shift-l = ['join-with right', 'mode main']
 
+# VLC по умолчанию открывается в плавающем режиме
+# Принудительно включаем плиточный режим для него
+[[on-window-detected]]
+if.app-id = 'org.videolan.vlc'
+run = 'layout tiling'
+
+# Системные настройки по умолчанию открываются в плавающем режиме
+# Принудительно включаем плиточный режим для них
+[[on-window-detected]]
+if.app-id = 'com.apple.systempreferences'
+run = 'layout tiling'
+
+# Открывать Raycast в плавающем режиме
+[[on-window-detected]]
+if.app-id = 'com.raycast.macos'
+run = 'layout floating'
+
 # Переместить браузер в рабочее пространство "B" при открытии
 [[on-window-detected]]
 if.app-id = 'com.apple.Safari'
@@ -164,3 +198,8 @@ run = "move-node-to-workspace V"
 [[on-window-detected]]
 if.app-id = 'com.tdesktop.Telegram'
 run = 'move-node-to-workspace M'
+
+# Переместить VSCode в рабочее пространство "C" при открытии
+[[on-window-detected]]
+if.app-id = 'com.microsoft.VSCode'
+run = 'move-node-to-workspace C'
