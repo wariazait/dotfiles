@@ -1,6 +1,6 @@
 <h1 align="center">Настройки программ и утилит для macOS</h3>
 
-<img src="https://github.com/wariazait/dotfiles/blob/main/images/showcase/Снимок%20экрана%202025-04-29%20в%2014.59.50.png" alt="Screenshot 1" width="900"/>
+<div align="center"><img src="https://github.com/wariazait/dotfiles/blob/main/images/showcase/Снимок%20экрана%202025-04-29%20в%2014.59.50.png" alt="Screenshot 1" width="900"/></div>
 
 <table>
   <tr>
@@ -17,8 +17,6 @@
 ## О сетапе
 
 ### Оконный менеджер: [AeroSpace](https://github.com/nikitabobko/AeroSpace),
-
-### Bindings/hotkeys: [skhd](https://github.com/koekeishiya/skhd),
 
 ### Обводка окон: [JankyBorders](https://github.com/FelixKratz/JankyBorders),
 
