@@ -1,9 +1,7 @@
 # Запускать AeroSpace при старте системы
 start-at-login = true
 
-# See: https://nikitabobko.github.io/AeroSpace/guide#layouts
-# The 'accordion-padding' specifies the size of accordion padding
-# You can set 0 to disable the padding feature
+# Отступ при компоновке окон в виде стопки
 accordion-padding = 10
 
 # Нормализации. Источник: https://nikitabobko.github.io/AeroSpace/guide#normalization
