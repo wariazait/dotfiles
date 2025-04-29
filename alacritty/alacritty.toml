@@ -16,7 +16,8 @@ style = "Regular"
 [window]
 decorations = "Buttonless"
 dynamic_padding = true
-opacity = 0.8
+opacity = 0.7
+blur = true
 startup_mode = "Maximized"
 
 [window.padding]
