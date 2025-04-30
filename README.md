@@ -22,4 +22,4 @@
 
 ### Эмулятор терминала: [Alacritty](https://github.com/alacritty/alacritty),
 
-### Текстовый редакто: [nvim](https://github.com/neovim/neovim) (настройки для версии под [macos](https://github.com/ErdajtSopjani/nvim)), 
+### Текстовый редактор: [nvim](https://github.com/neovim/neovim)
